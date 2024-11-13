@@ -1,11 +1,3 @@
-<!-- <p>sales-person-list works!</p>
-
-<p>Just a quick test!</p>
-
-<p>
-  {{ salesPersonList[0].firstName }} {{ salesPersonList[0].lastName }}
-</p> -->
-
 <table class="table table-hover">
   <thead class="table-dark">
     <tr>
@@ -18,7 +10,7 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let tempSalesPerson of salesPersonList">
+    <tr *ngFor="let tempSalesPerson of salesPersonList" [ngClass]="{'highlight':tempSalesPerson.salesVolume >= 60000}">
       <td>{{ tempSalesPerson.firstName }}</td>
       <td>{{ tempSalesPerson.lastName }}</td>
       <td>{{ tempSalesPerson.email }}</td>
